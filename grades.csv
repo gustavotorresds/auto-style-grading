@@ -1,0 +1,378 @@
+id,Decomposition,Commenting,Instance Variables and Parameters and Constants,Naming and Spacing,Logic and Redundancy
+9711,Minor Issues,Perfect,Minor Issues,Minor Issues,Perfect
+9736,Major Issues,No comments or lots missing,Perfect,Minor Issues,Minor Issues
+9743,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+9829,Minor Issues,Perfect,Minor Issues,Perfect,Major Issues
+9947,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+9950,Perfect,Perfect,Perfect,Perfect,Minor Issues
+9955,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+9959,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+9961,Perfect,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+9963,Minor Issues,Perfect,Perfect,Perfect,Perfect
+9965,Major Issues,Perfect,Perfect,Minor Issues,Minor Issues
+9966,Major Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+9967,Major Issues,Perfect,Major Issues,Perfect,Perfect
+9968,Minor Issues,Major Issues,Perfect,Minor Issues,Minor Issues
+9969,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+9970,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+9972,Perfect,Perfect,Major Issues,Perfect,Major Issues
+9977,Perfect,Perfect,Major Issues,Perfect,Minor Issues
+9978,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+9980,Perfect,Perfect,Minor Issues,Perfect,Perfect
+9983,Major Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+9992,Minor Issues,Major Issues,Major Issues,Minor Issues,Major Issues
+9994,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+9997,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10003,Major Issues,Major Issues,Perfect,Minor Issues,Perfect
+10008,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10009,Minor Issues,Perfect,Perfect,Minor Issues,Perfect
+10010,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10011,Perfect,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10012,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10014,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10016,Minor Issues,Minor Issues,Minor Issues,Major Issues,Minor Issues
+10026,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10028,Minor Issues,Major Issues,Perfect,Perfect,Perfect
+10029,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10030,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10032,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10040,Perfect,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10047,Minor Issues,Major Issues,Perfect,Perfect,Minor Issues
+10048,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10053,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10056,Perfect,Minor Issues,Perfect,Perfect,Minor Issues
+10062,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10070,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10077,Minor Issues,Major Issues,Minor Issues,Minor Issues,Minor Issues
+10079,Minor Issues,Major Issues,Minor Issues,Perfect,Perfect
+10080,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10081,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10083,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10084,Minor Issues,Minor Issues,Minor Issues,Perfect,Perfect
+10085,Minor Issues,Perfect,Major Issues,Perfect,Perfect
+10086,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10087,Major Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10088,Major Issues,Perfect,Perfect,Minor Issues,Minor Issues
+10089,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10090,Perfect,Minor Issues,Minor Issues,Minor Issues,Perfect
+10092,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10093,Perfect,Minor Issues,Minor Issues,Perfect,Perfect
+10094,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10096,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10097,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10098,Perfect,Minor Issues,Minor Issues,Perfect,Minor Issues
+10099,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10101,Minor Issues,Perfect,Perfect,Major Issues,Major Issues
+10102,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10103,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10104,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10105,Perfect,Perfect,Perfect,Perfect,Perfect
+10106,Perfect,Perfect,Perfect,Perfect,Perfect
+10107,Perfect,Perfect,Perfect,Perfect,Perfect
+10109,Minor Issues,Perfect,Minor Issues,Minor Issues,Perfect
+10110,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10111,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10112,Minor Issues,Perfect,Minor Issues,Minor Issues,Perfect
+10113,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10114,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10116,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10117,Perfect,Perfect,Perfect,Perfect,Perfect
+10118,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10120,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+10121,Major Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10122,Perfect,Perfect,Minor Issues,Minor Issues,Perfect
+10123,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+10124,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10125,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10126,Major Issues,Perfect,Perfect,Minor Issues,Perfect
+10127,Minor Issues,Minor Issues,Minor Issues,Perfect,Perfect
+10128,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10129,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10130,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10131,Minor Issues,Perfect,Major Issues,Perfect,Perfect
+10132,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10133,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10134,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10136,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10137,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10138,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10139,Perfect,Perfect,Perfect,Perfect,Perfect
+10140,Minor Issues,Perfect,Perfect,Perfect,Major Issues
+10141,Minor Issues,Minor Issues,Minor Issues,Perfect,Perfect
+10142,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10143,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10144,Minor Issues,Minor Issues,Major Issues,Perfect,Perfect
+10145,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10146,Perfect,Minor Issues,Minor Issues,Perfect,Perfect
+10147,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10148,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10149,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10151,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10152,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10153,Major Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10154,Perfect,Perfect,Minor Issues,Minor Issues,Perfect
+10156,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10157,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10158,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10159,Minor Issues,Minor Issues,Minor Issues,Major Issues,Minor Issues
+10160,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10161,Perfect,Perfect,Major Issues,Perfect,Minor Issues
+10162,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10163,Perfect,Minor Issues,Perfect,Minor Issues,Perfect
+10164,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10165,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10166,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10167,Perfect,Minor Issues,Minor Issues,Perfect,Minor Issues
+10168,Perfect,Perfect,Perfect,Minor Issues,Minor Issues
+10169,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10170,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10171,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10173,Perfect,Perfect,Perfect,Minor Issues,Minor Issues
+10174,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10175,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10176,Major Issues,Minor Issues,Major Issues,Minor Issues,Minor Issues
+10177,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10178,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10179,Perfect,Perfect,Major Issues,Perfect,Perfect
+10180,Minor Issues,Minor Issues,Minor Issues,Perfect,Perfect
+10181,Minor Issues,Major Issues,Major Issues,Perfect,Minor Issues
+10182,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10183,Minor Issues,Major Issues,Minor Issues,Minor Issues,Minor Issues
+10184,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10185,Perfect,Perfect,Perfect,Minor Issues,Minor Issues
+10186,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10187,Minor Issues,Minor Issues,Perfect,Perfect,Perfect
+10188,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+10189,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10190,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10191,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10192,Minor Issues,Major Issues,Perfect,Perfect,Perfect
+10193,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10194,Minor Issues,Minor Issues,Minor Issues,Perfect,Perfect
+10195,Minor Issues,Major Issues,Minor Issues,Perfect,Perfect
+10196,Minor Issues,Minor Issues,Major Issues,Minor Issues,Perfect
+10197,Perfect,Minor Issues,Major Issues,Perfect,Minor Issues
+10198,Perfect,Perfect,Major Issues,Perfect,Perfect
+10199,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10200,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10201,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10202,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10203,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10204,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10205,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10206,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10207,Perfect,Minor Issues,Perfect,Minor Issues,Perfect
+10208,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10209,Perfect,Perfect,Perfect,Perfect,Perfect
+10210,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10211,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10212,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10213,Major Issues,Perfect,Perfect,Perfect,Major Issues
+10214,Major Issues,Perfect,Perfect,Perfect,Perfect
+10215,Minor Issues,Perfect,Perfect,Perfect,Major Issues
+10216,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10217,Major Issues,Perfect,Perfect,Perfect,Minor Issues
+10219,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10220,Minor Issues,Perfect,Minor Issues,Minor Issues,Perfect
+10221,Minor Issues,Minor Issues,Major Issues,Perfect,Perfect
+10222,Perfect,Minor Issues,Minor Issues,Perfect,Minor Issues
+10223,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10224,Perfect,Perfect,Perfect,Perfect,Perfect
+10225,Minor Issues,Minor Issues,Perfect,Perfect,Perfect
+10226,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10227,Perfect,Perfect,Major Issues,Perfect,Minor Issues
+10228,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10229,Major Issues,Major Issues,Minor Issues,Minor Issues,Major Issues
+10231,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10232,Perfect,Perfect,Perfect,Minor Issues,Minor Issues
+10233,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10234,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10235,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10236,Perfect,Perfect,Minor Issues,Minor Issues,Perfect
+10237,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10238,Minor Issues,Perfect,Perfect,Major Issues,Perfect
+10239,Minor Issues,Perfect,Major Issues,Minor Issues,Minor Issues
+10240,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10241,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10242,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10243,Minor Issues,Minor Issues,Minor Issues,Perfect,Perfect
+10244,Major Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10245,Minor Issues,Perfect,Minor Issues,Minor Issues,Perfect
+10246,Minor Issues,Major Issues,Minor Issues,Minor Issues,Minor Issues
+10247,Perfect,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10248,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10249,Minor Issues,Minor Issues,Major Issues,Minor Issues,Perfect
+10250,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10251,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10252,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10253,Major Issues,Perfect,Perfect,Perfect,Minor Issues
+10254,Perfect,Minor Issues,Perfect,Minor Issues,Minor Issues
+10255,Perfect,Minor Issues,Perfect,Minor Issues,Minor Issues
+10256,Perfect,Minor Issues,Minor Issues,Perfect,Minor Issues
+10257,Perfect,Minor Issues,Minor Issues,Perfect,Minor Issues
+10258,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10259,Perfect,Perfect,Perfect,Perfect,Perfect
+10260,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10261,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10262,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10263,Major Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10264,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10265,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10266,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10267,Minor Issues,Minor Issues,Major Issues,Minor Issues,Minor Issues
+10268,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10269,Major Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10270,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10271,Major Issues,Major Issues,Major Issues,Minor Issues,Minor Issues
+10272,Minor Issues,Minor Issues,Major Issues,Minor Issues,Minor Issues
+10273,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10274,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+10275,Minor Issues,Minor Issues,Major Issues,Minor Issues,Horrible
+10276,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10277,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10278,Perfect,Minor Issues,Perfect,Minor Issues,Perfect
+10279,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10280,Perfect,Minor Issues,Minor Issues,Minor Issues,Perfect
+10281,Major Issues,Perfect,Minor Issues,Perfect,Perfect
+10282,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10283,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10284,Perfect,Perfect,Perfect,Perfect,Perfect
+10285,Minor Issues,Perfect,Major Issues,Perfect,Perfect
+10286,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10287,Perfect,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10288,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10289,Perfect,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10290,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10291,Perfect,Minor Issues,Perfect,Minor Issues,Perfect
+10292,Major Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10293,Minor Issues,Major Issues,Perfect,Minor Issues,Perfect
+10294,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10295,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10296,,Major Issues,Minor Issues,Major Issues,Perfect
+10297,Minor Issues,Minor Issues,Major Issues,Major Issues,Minor Issues
+10299,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10300,Minor Issues,Minor Issues,Perfect,Minor Issues,Perfect
+10301,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10302,Minor Issues,Perfect,Minor Issues,Major Issues,Minor Issues
+10303,Perfect,Perfect,Perfect,Perfect,Perfect
+10304,Major Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10305,Minor Issues,Minor Issues,Perfect,Minor Issues,Perfect
+10306,Minor Issues,Perfect,Perfect,Minor Issues,Minor Issues
+10307,Minor Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10308,Major Issues,Minor Issues,Perfect,Minor Issues,Minor Issues
+10309,Perfect,Perfect,Perfect,Perfect,Perfect
+10310,Minor Issues,Major Issues,Minor Issues,Minor Issues,Minor Issues
+10311,Perfect,Perfect,Major Issues,Minor Issues,Minor Issues
+10312,Major Issues,Minor Issues,Perfect,Perfect,Perfect
+10313,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10314,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10315,Major Issues,Major Issues,Major Issues,Minor Issues,Minor Issues
+10316,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10317,Minor Issues,Minor Issues,Major Issues,Minor Issues,Minor Issues
+10318,Perfect,Perfect,Minor Issues,Minor Issues,Perfect
+10319,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10320,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10321,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10322,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+10323,Minor Issues,Minor Issues,Major Issues,Perfect,Perfect
+10324,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10325,Perfect,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10326,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10327,Major Issues,Perfect,Minor Issues,Perfect,Major Issues
+10328,Minor Issues,Perfect,Minor Issues,Minor Issues,Perfect
+10329,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10330,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10331,Major Issues,Perfect,Major Issues,Perfect,Minor Issues
+10332,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10333,Perfect,Major Issues,Minor Issues,Minor Issues,Minor Issues
+10334,Major Issues,Perfect,Perfect,Perfect,Minor Issues
+10335,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10336,Major Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10337,Major Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10338,Minor Issues,No comments or lots missing,Major Issues,Perfect,Major Issues
+10339,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10340,Major Issues,Perfect,Perfect,Perfect,Major Issues
+10341,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10342,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10344,,Perfect,Minor Issues,Perfect,Perfect
+10345,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10346,Perfect,Minor Issues,Minor Issues,Perfect,Minor Issues
+10347,Minor Issues,Perfect,Perfect,Major Issues,Minor Issues
+10348,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+10349,Major Issues,Perfect,Minor Issues,Perfect,Perfect
+10350,Perfect,Major Issues,Perfect,Perfect,Minor Issues
+10351,Major Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10353,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10354,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10355,Perfect,Perfect,Perfect,Minor Issues,Perfect
+10356,Perfect,Perfect,Minor Issues,Perfect,Minor Issues
+10365,Minor Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10382,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10384,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10390,Major Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10394,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10396,Major Issues,Minor Issues,Major Issues,Minor Issues,Perfect
+10397,Perfect,Minor Issues,Minor Issues,Minor Issues,Perfect
+10401,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10402,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10403,Perfect,Perfect,Minor Issues,Minor Issues,Perfect
+10405,Major Issues,Perfect,Perfect,Perfect,Perfect
+10407,Minor Issues,Perfect,Major Issues,Major Issues,Perfect
+10409,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10410,Minor Issues,Major Issues,Minor Issues,Minor Issues,Minor Issues
+10411,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10413,Perfect,Perfect,Perfect,Perfect,Perfect
+10414,Perfect,Perfect,Perfect,Perfect,Perfect
+10416,Major Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10417,Major Issues,Perfect,Perfect,Perfect,Minor Issues
+10418,Perfect,Minor Issues,Minor Issues,Minor Issues,Major Issues
+10419,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10420,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10421,Minor Issues,Minor Issues,Perfect,Minor Issues,Major Issues
+10423,Minor Issues,Perfect,Major Issues,Minor Issues,Minor Issues
+10424,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10425,Major Issues,Perfect,Minor Issues,Perfect,Perfect
+10426,Minor Issues,Perfect,Perfect,Perfect,Perfect
+10427,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10428,Minor Issues,Minor Issues,Major Issues,Minor Issues,Minor Issues
+10429,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10430,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10431,Minor Issues,Perfect,Minor Issues,Minor Issues,Minor Issues
+10432,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10433,Perfect,Minor Issues,Perfect,Minor Issues,Perfect
+10434,Minor Issues,Perfect,Perfect,Perfect,Minor Issues
+10435,Minor Issues,Minor Issues,Major Issues,Minor Issues,Minor Issues
+10436,Major Issues,Minor Issues,Perfect,Minor Issues,Major Issues
+10437,Minor Issues,Major Issues,Minor Issues,Perfect,Minor Issues
+10438,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10439,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10440,Major Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10441,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10443,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10444,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Perfect
+10445,Perfect,Minor Issues,Perfect,Perfect,Perfect
+10446,Perfect,Minor Issues,Perfect,Minor Issues,Perfect
+10447,Major Issues,Minor Issues,Minor Issues,Minor Issues,Major Issues
+10448,Major Issues,Perfect,Minor Issues,Perfect,Minor Issues
+10449,Minor Issues,Perfect,Minor Issues,Perfect,Perfect
+10450,Minor Issues,Minor Issues,Major Issues,Perfect,Minor Issues
+10477,Perfect,Perfect,Perfect,Perfect,Perfect
+10479,Minor Issues,Minor Issues,Perfect,Perfect,Perfect
+10483,Perfect,Minor Issues,Perfect,Minor Issues,Perfect
+10485,Perfect,Perfect,Major Issues,Perfect,Perfect
+10489,Minor Issues,Minor Issues,Perfect,Perfect,Minor Issues
+10588,Major Issues,Major Issues,Minor Issues,Minor Issues,Minor Issues
+10591,Minor Issues,Perfect,Major Issues,Perfect,Minor Issues
+10596,Minor Issues,Perfect,Minor Issues,Minor Issues,Perfect
+10597,Perfect,Minor Issues,Perfect,Major Issues,Minor Issues
+10599,Minor Issues,Minor Issues,Minor Issues,Minor Issues,Minor Issues
+10602,Minor Issues,Major Issues,Minor Issues,Perfect,Minor Issues
+10603,Minor Issues,Minor Issues,Perfect,Minor Issues,Major Issues
+10609,Minor Issues,Minor Issues,Perfect,Perfect,Perfect
+10615,Perfect,Perfect,Minor Issues,Perfect,Perfect
+10624,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
+10638,Minor Issues,Major Issues,Major Issues,Minor Issues,Perfect
+10710,Minor Issues,Minor Issues,Minor Issues,Perfect,Perfect
+10753,Perfect,Perfect,Perfect,Perfect,Minor Issues
+10840,Perfect,Perfect,Minor Issues,Minor Issues,Minor Issues
+10897,Minor Issues,Minor Issues,Minor Issues,Perfect,Minor Issues
