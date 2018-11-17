@@ -1,10 +1,11 @@
+import numpy as np
 import util
 
 def main():
-	grades = util.process_grades('./grades.csv')
+	grades = util.process_grades('./data/grades.csv')
 
 	# Do something with grades, e.g., save as .csv
-	# np.savetxt('./processed-grades.csv', grades)
+	np.savetxt('./output/processed-grades.csv', grades)
 
 def svg():
 	pass
