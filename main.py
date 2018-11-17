@@ -7,7 +7,7 @@ def main():
 	# Do something with grades, e.g., save as .csv
 	np.savetxt('./output/processed-grades.csv', grades)
 
-def svg():
+def svm():
 	pass
 
 def naive_bayes():
