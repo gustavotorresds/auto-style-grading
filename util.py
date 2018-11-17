@@ -33,7 +33,8 @@ BUCKET_WEIGHT[BUCKETS[2]] = 1
 BUCKET_WEIGHT[BUCKETS[3]] = 1
 BUCKET_WEIGHT[BUCKETS[4]] = 1
 
-THRESHOLD = 25
+# Threshold to classify whether a grade is good or not.
+THRESHOLD = 30
 
 '''
 Returns an array of 1's and 0's corresponding to each assignment.
@@ -44,7 +45,7 @@ def generate_labels(csv_path):
 	assignment_ids, labeled_buckets = load_data(csv_path)
 	processed_grades = process_grades(labeled_buckets)
 
-	final_results = np.array([float(grade >= 25) for grade in processed_grades])
+	final_results = np.array([float(grade >= THRESHOLD) for grade in processed_grades])
 	return final_results
 
 '''
