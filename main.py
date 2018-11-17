@@ -2,10 +2,10 @@ import numpy as np
 import util
 
 def main():
-	grades = util.process_grades('./data/grades.csv')
+	labels = util.generate_labels('./data/grades.csv')
 
 	# Do something with grades, e.g., save as .csv
-	np.savetxt('./output/processed-grades.csv', grades)
+	np.savetxt('./output/labels.txt', labels)
 
 def svm():
 	pass

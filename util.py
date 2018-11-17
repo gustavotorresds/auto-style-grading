@@ -33,13 +33,28 @@ BUCKET_WEIGHT[BUCKETS[2]] = 1
 BUCKET_WEIGHT[BUCKETS[3]] = 1
 BUCKET_WEIGHT[BUCKETS[4]] = 1
 
-def process_grades(csv_path):
-	assignment_ids, labeled_buckets = load_data(csv_path)
+THRESHOLD = 25
 
+'''
+Returns an array of 1's and 0's corresponding to each assignment.
+1 indicates that the assignment had a good grade. 0 indicates the assignment
+had a bad grade.
+'''
+def generate_labels(csv_path):
+	assignment_ids, labeled_buckets = load_data(csv_path)
+	processed_grades = process_grades(labeled_buckets)
+
+	final_results = np.array([float(grade >= 25) for grade in processed_grades])
+	return final_results
+
+'''
+Returns an np array with a grade for each of the labeled buckets.
+'''
+def process_grades(labeled_buckets):
 	grades = np.array([])
 
-	for i, assignment_id in enumerate(assignment_ids):
-		grade = generate_grade(labeled_buckets[i])
+	for labels in labeled_buckets:
+		grade = generate_grade(labels)
 		grades = np.append(grades, grade)
 
 	return grades
