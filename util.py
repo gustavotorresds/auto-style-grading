@@ -71,7 +71,6 @@ def load_data(csv_path):
 	with open(csv_path, 'r') as csv_fh:
 		headers = csv_fh.readline().strip().split(',')
 
-	# Load features and labels
 	assignment_id_col = [0]
 	bucket_cols = [i for i in range(1, len(headers))]
 
