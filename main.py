@@ -12,9 +12,9 @@ def main():
 	y = util.generate_labels_for_bucket('./data/grades/1222.csv', bucket)
 	X = np.array([extract_features(assignment_id, bucket) for assignment_id in assignment_ids])
 
-	split_index = int(len(assignment_ids) * .8)
-	xTrain, xTest = X[split_index:], X[:split_index]
-	yTrain, yTest = y[split_index:], y[:split_index]
+	split_index = int(len(assignment_ids) * .9)
+	xTrain, xTest = X[:split_index], X[split_index:]
+	yTrain, yTest = y[:split_index], y[split_index:]
 
 	naive_bayes(xTrain, yTrain, xTest, yTest)
 	logistic_regression(xTrain, yTrain, xTest, yTest)
@@ -35,6 +35,9 @@ def logistic_regression(xTrain, yTrain, xTest, yTest):
 
 	clf = LogisticRegression(solver='lbfgs')
 	clf.fit(xTrain, yTrain)
+
+	predictions = np.array(clf.predict(xTest))
+	np.savetxt('./output/labels.txt', predictions)
 
 	print('Score is', clf.score(xTest, yTest))	
 
