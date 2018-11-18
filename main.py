@@ -3,10 +3,10 @@ import util
 import os
 
 def main():
-	assignment_ids, _ = util.load_data('./data/grades.csv')
+	assignment_ids, _ = util.load_data('./data/grades/1222.csv')
 
 	bucket = 'Decomposition'
-	labels = util.generate_labels_for_bucket('./data/grades.csv', bucket)
+	labels = util.generate_labels_for_bucket('./data/grades/1222.csv', bucket)
 
 	X = np.array([extract_features(assignment_id, bucket) for assignment_id in assignment_ids])
 	print(X)
@@ -18,7 +18,7 @@ def naive_bayes():
 	pass
 
 def extract_features(assignment_id, bucket):
-	file_path = '/'.join(['./data/files', assignment_id, 'Breakout.java'])
+	file_path = '/'.join(['./data/files/1222', assignment_id, 'Breakout.java'])
 	file = util.open_file(file_path)
 	
 	if bucket == 'Decomposition':
