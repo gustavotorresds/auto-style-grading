@@ -12,19 +12,20 @@ def main():
 	X = np.array([extract_features(assignment_id, bucket) for assignment_id in assignment_ids])
 
 	split_index = int(len(assignment_ids) * .8)
-	trainX, testX = X[split_index:], X[:split_index]
-	trainY, testY = y[split_index:], y[:split_index]
+	xTrain, xTest = X[split_index:], X[:split_index]
+	yTrain, yTest = y[split_index:], y[:split_index]
 
-	clf = GaussianNB()
-	clf.fit(trainX, trainY)
-
-	print(clf.score(testX, testY))
+	naive_bayes(xTrain, yTrain, xTest, yTest)
 
 def svm():
 	pass
 
-def naive_bayes():
-	pass
+def naive_bayes(xTrain, yTrain, xTest, yTest):
+	print('Training on Naive Bayes')
+	clf = GaussianNB()
+	clf.fit(xTrain, yTrain)
+
+	print('Score is', clf.score(xTest, yTest))
 
 def extract_features(assignment_id, bucket):
 	file_path = '/'.join(['./data/files/1222', assignment_id, 'Breakout.java'])
