@@ -22,6 +22,7 @@ def svm():
 
 def naive_bayes(xTrain, yTrain, xTest, yTest):
 	print('Training on Naive Bayes')
+
 	clf = GaussianNB()
 	clf.fit(xTrain, yTrain)
 
@@ -37,16 +38,15 @@ def extract_features(assignment_id, bucket):
 	return []
 
 '''
-[Work in Progress]
 Input: a compilable Java progrma
-Output: an array with containing
+Output: an array containing
 - # of lines in file
 - # of methods in file
-- # Average of # lines per method
+- average # of lines per method
 '''
 def decomposition_features(file):
 	# TODO: check if this actually workds. It probably has some untouched edge cases,
-	#  but it seems to work for most cases.
+	# but it seems to work for most cases.
 	def is_a_method(line):
 		return (('private' in line or 'public' in line) and \
 			'(' in line and \
