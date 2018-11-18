@@ -1,15 +1,24 @@
 import numpy as np
 import util
 import os
+from sklearn.naive_bayes import GaussianNB
 
 def main():
 	assignment_ids, _ = util.load_data('./data/grades/1222.csv')
 
 	bucket = 'Decomposition'
-	labels = util.generate_labels_for_bucket('./data/grades/1222.csv', bucket)
-	
+
+	y = util.generate_labels_for_bucket('./data/grades/1222.csv', bucket)
 	X = np.array([extract_features(assignment_id, bucket) for assignment_id in assignment_ids])
-	print(X)
+
+	split_index = int(len(assignment_ids) * .8)
+	trainX, testX = X[split_index:], X[:split_index]
+	trainY, testY = y[split_index:], y[:split_index]
+
+	clf = GaussianNB()
+	clf.fit(trainX, trainY)
+
+	print(clf.score(testX, testY))
 
 def svm():
 	pass
@@ -18,7 +27,6 @@ def naive_bayes():
 	pass
 
 def extract_features(assignment_id, bucket):
-	# print(assignment_id)
 	file_path = '/'.join(['./data/files/1222', assignment_id, 'Breakout.java'])
 	file = util.open_file(file_path)
 	

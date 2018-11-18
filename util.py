@@ -116,5 +116,5 @@ def open_file(path):
 		file = open(path, "r")
 		return file
 	except IOError:
-		print "Error: File does not appear to exist.",
+		print("Error: File does not appear to exist.")
 		return None
