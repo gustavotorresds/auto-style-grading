@@ -2,6 +2,7 @@ import numpy as np
 import util
 import os
 from sklearn.naive_bayes import GaussianNB
+from sklearn.linear_model import LogisticRegression
 
 def main():
 	assignment_ids, _ = util.load_data('./data/grades/1222.csv')
@@ -16,6 +17,7 @@ def main():
 	yTrain, yTest = y[split_index:], y[:split_index]
 
 	naive_bayes(xTrain, yTrain, xTest, yTest)
+	logistic_regression(xTrain, yTrain, xTest, yTest)
 
 def svm():
 	pass
@@ -27,6 +29,14 @@ def naive_bayes(xTrain, yTrain, xTest, yTest):
 	clf.fit(xTrain, yTrain)
 
 	print('Score is', clf.score(xTest, yTest))
+
+def logistic_regression(xTrain, yTrain, xTest, yTest):
+	print('Training on Logistic Regression')
+
+	clf = LogisticRegression(solver='lbfgs')
+	clf.fit(xTrain, yTrain)
+
+	print('Score is', clf.score(xTest, yTest))	
 
 def extract_features(assignment_id, bucket):
 	file_path = '/'.join(['./data/files/1222', assignment_id, 'Breakout.java'])
