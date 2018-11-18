@@ -34,6 +34,9 @@ def extract_features(assignment_id, bucket):
 	
 	if bucket == 'Decomposition':
 		return decomposition_features(file)
+	# TODO: implement feature extraction for other buckets.
+	else:
+		print('Can\'t read that bucket yet :/')
 
 	return []
 
