@@ -94,7 +94,7 @@ def decomposition_features(file):
 			bracket_counter = bracket_counter + open_brackets - close_brackets
 
 			if bracket_counter == 0: # This the end of the method!
-				method_line_counts.append(method_line_count_helper)
+				method_line_counts.append(method_line_count)
 				method_line_count = 0
 				method_line_count_mode = False
 			else:
@@ -105,7 +105,7 @@ def decomposition_features(file):
 				# Get into method-line-count mode
 				method_line_count_mode = True
 				bracket_counter = 1
-				method_line_count_helper = 0
+				method_line_count = 0
 
 	num_methods = len(method_line_counts)
 	lines_per_method = np.mean(method_line_counts)
