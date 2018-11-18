@@ -1,0 +1,51 @@
+/*
+ * File: MouseReporter.java
+ * -----------------------------
+ * Output the location of the mouse to a label on the
+ * screen. Change the color of the label to red when
+ * the mouse touches it.
+ */
+
+import java.awt.Color;
+import java.awt.event.MouseEvent;
+
+import acm.graphics.GLabel;
+import acm.graphics.GObject;
+import acm.program.*;
+
+public class MouseReporter extends GraphicsProgram {
+
+	// A constant for the x value of the label
+	private static final int INDENT = 20;
+	
+	// This variable is visible to the entire program
+	// It is called an "instance" variable
+	private GLabel label = new GLabel("");
+	
+	public void run() {
+		addMouseListeners();		
+	}
+	
+	//This mouse event detects the coordinates of the mouse and turns the label red if the mouse is on it. 
+	public void mouseMoved(MouseEvent e) {
+		double xlocation= e.getX();
+		double ylocation= e.getY();
+		addLabel(xlocation,ylocation,Color.BLUE);
+		GLabel label = getElementAt(INDENT, e.getY());
+		if((getElementAt(xlocation,ylocation)!= null)){
+			label.setColor(Color.RED);
+		}
+	}
+	//public GObject getElementAt(double x, double y)
+		
+
+	private void addLabel(double xlocation, double ylocation, Color color) {
+				label.setFont("Courier-24");
+				label.setColor(Color.BLUE);
+				label.setLabel(xlocation + "," +ylocation);
+				add(label, INDENT, getHeight()/2);
+		
+	}
+
+
+}

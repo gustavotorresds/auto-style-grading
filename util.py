@@ -36,6 +36,10 @@ BUCKET_WEIGHT[BUCKETS[4]] = 1
 # Threshold to classify whether a grade is good or not.
 THRESHOLD = 30
 
+BOOL_TO_LABELS = defaultdict(int)
+BOOL_TO_LABELS['Good'] = ['Perfect', 'Minor Issues']
+BOOL_TO_LABELS['Bad'] = ['Major Issues', 'Horrible', 'No comments or lots missing']
+
 '''
 Returns an array of 1's and 0's corresponding to each assignment.
 1 indicates that the assignment had a good grade. 0 indicates the assignment
@@ -46,6 +50,18 @@ def generate_labels(csv_path):
 	processed_grades = process_grades(labeled_buckets)
 
 	final_results = np.array([float(grade >= THRESHOLD) for grade in processed_grades])
+	return final_results
+
+'''
+Returns an array of 1's and 0's corresponding to each assignment.
+1 indicates that the assignment had a good grade in the specified bucket. 0 indicates
+the assignment had a bad grade for the specified bucket.
+'''
+def generate_labels_for_bucket(csv_path, bucket):
+	assignment_ids, labeled_buckets = load_data(csv_path)
+	bucket_labels = labeled_buckets[:,BUCKETS.index(bucket)]
+
+	final_results = np.array([float(label in BOOL_TO_LABELS['Good']) for label in bucket_labels])
 	return final_results
 
 '''
@@ -94,3 +110,11 @@ def load_data(csv_path):
 	buckets = np.loadtxt(csv_path, dtype=np.dtype(str), delimiter=',', skiprows=1, usecols=bucket_cols)
 
 	return assignment_ids, buckets
+
+def open_file(path):
+	try:
+		file = open(path, "r")
+		return file
+	except IOError:
+		print "Error: File does not appear to exist.",
+		return None
