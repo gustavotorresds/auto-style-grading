@@ -10,6 +10,8 @@ messed up when splitting data by commas. My final header looks like this:
 id,Decomposition,Commenting,Instance Variables and Parameters and Constants,Naming and Spacing,Logic and Redundancy
 '''
 
+VAR_TYPES = ['double', 'int', 'String', 'GLabel', 'GObject', 'GOval', 'GRect', 'void', 'boolean', 'RandomGenerator']
+
 # The impact each label has.
 # TODO: what scale should we consider?
 # TODO: when label is not found (i.e., "Random Label"), the default impact

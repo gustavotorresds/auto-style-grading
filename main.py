@@ -19,8 +19,17 @@ def main():
 	naive_bayes(xTrain, yTrain, xTest, yTest)
 	logistic_regression(xTrain, yTrain, xTest, yTest)
 
-def svm():
-	pass
+	bucket = 'Naming and Spacing'
+
+	y = util.generate_labels_for_bucket('./data/grades/1222.csv', bucket)
+	X = np.array([extract_features(assignment_id, bucket) for assignment_id in assignment_ids])
+
+	split_index = int(len(assignment_ids) * .9)
+	xTrain, xTest = X[:split_index], X[split_index:]
+	yTrain, yTest = y[:split_index], y[split_index:]
+
+	naive_bayes(xTrain, yTrain, xTest, yTest)
+	logistic_regression(xTrain, yTrain, xTest, yTest)
 
 def naive_bayes(xTrain, yTrain, xTest, yTest):
 	print('Training on Naive Bayes')
@@ -48,6 +57,8 @@ def extract_features(assignment_id, bucket):
 	if bucket == 'Decomposition':
 		return decomposition_features(file)
 	# TODO: implement feature extraction for other buckets.
+	elif bucket == 'Naming and Spacing':
+		return naming_and_spacing_features(file)
 	else:
 		print('Can\'t read that bucket yet :/')
 
@@ -114,6 +125,75 @@ def decomposition_features(file):
 	lines_per_method = np.mean(method_line_counts)
 
 	return [line_count, num_methods, lines_per_method]
+
+'''
+Input: a compilable Java progrma
+Output: an array containing
+- # of variables with lowerCamelCase
+- # of lines with wrong indentation
+'''
+def naming_and_spacing_features(file):
+	'''Removes characters that might have been attached to variable name'''
+	def variable_filter(var):
+		var = var.replace(';', '')
+		var = var.replace('=', '')
+		var = var.replace(',', '')
+
+		if '(' in var:
+			argContent = var[var.index('('):]
+			var = var.replace(argContent, '')
+
+		return var
+
+	def get_variable(line):
+		if ('static' not in line and 'final' not in line):
+			tokens = line.split()
+
+			returnNext = False
+
+			for token in tokens:
+				if returnNext:
+					return variable_filter(token)
+				if token in util.VAR_TYPES:
+					returnNext = True
+		return None
+
+	def is_camel_case(var):
+		if not var[0].islower():
+			return False
+		if '_' in var:
+			return False
+		return True
+
+	def has_right_indentation(line, indentation_level):
+		if line.strip() == '':
+			return True
+
+		i = 0
+		while line[i] == '\t':
+			i += 1
+		return i == indentation_level
+
+	indentation_level = 0
+
+	camel_case_count = 0
+	wrong_indentation_count = 0
+
+	for line in file:
+		var = get_variable(line)
+		if var and is_camel_case(var):
+			camel_case_count += 1
+
+		if '}' in line:
+			indentation_level -= 1
+
+		if not has_right_indentation(line, indentation_level):
+			wrong_indentation_count += 1
+
+		if '{' in line:
+			indentation_level += 1
+
+	return [camel_case_count, wrong_indentation_count]
 
 if __name__ == "__main__":
 	main()
