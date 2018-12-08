@@ -16,15 +16,11 @@ VAR_TYPES = ['double', 'int', 'String', 'GLabel', 'GObject', 'GOval', 'GRect', '
 # TODO: what scale should we consider?
 # TODO: when label is not found (i.e., "Random Label"), the default impact
 # ends up being zero. Is that what we want?
-LABEL_TO_GRADE = defaultdict(int)
-LABEL_TO_GRADE['Perfect'] = 7
-LABEL_TO_GRADE['Minor Issues'] = 5
-LABEL_TO_GRADE['Major Issues'] = 3
-LABEL_TO_GRADE['Horrible'] = 1
-LABEL_TO_GRADE['No comments or lots missing'] = 0
 
 BUCKETS = ['Decomposition', 'Commenting', 'Instance Variables and Parameters and Constants',\
  'Naming and Spacing', 'Logic and Redundancy']
+
+GRADES = {'Major Issues': 1, 'Minor Issues': 2, 'Perfect': 3}
 
 # The weigth each bucket should have on the grading.
 # TODO: should we weight anything heavier? How should we attribute weights?
@@ -42,17 +38,23 @@ BOOL_TO_LABELS = defaultdict(int)
 BOOL_TO_LABELS['Good'] = ['Perfect', 'Minor Issues']
 BOOL_TO_LABELS['Bad'] = ['Major Issues', 'Horrible', 'No comments or lots missing']
 
-'''
-Returns an array of 1's and 0's corresponding to each assignment.
-1 indicates that the assignment had a good grade. 0 indicates the assignment
-had a bad grade.
-'''
-def generate_labels(csv_path):
-	assignment_ids, labeled_buckets = load_data(csv_path)
-	processed_grades = process_grades(labeled_buckets)
+def get_data(quarter, bucket):
+	csv_path = '/'.join(['.', 'data', 'grades', quarter + '.csv'])
 
-	final_results = np.array([float(grade >= THRESHOLD) for grade in processed_grades])
-	return final_results
+	with open(csv_path, 'r') as csv_f:
+		# headers = csv_f.readline().strip().split(',')
+		reader = csv.DictReader(csv_f)
+
+		ids = []
+		labels = []
+
+		for row in reader:
+			label = row[bucket]
+			if label in GRADES:
+				ids.append('/'.join([quarter, row['\ufeffid']]))
+				labels.append(int(GRADES[label]))
+
+		return ids, labels
 
 '''
 Returns an array of 1's and 0's corresponding to each assignment.
@@ -67,37 +69,6 @@ def generate_labels_for_bucket(csv_path, bucket):
 	return final_results
 
 '''
-Returns an np array with a grade for each of the labeled buckets.
-'''
-def process_grades(labeled_buckets):
-	grades = np.array([])
-
-	for labels in labeled_buckets:
-		grade = generate_grade(labels)
-		grades = np.append(grades, grade)
-
-	return grades
-
-'''
-Uses BUCKET_WEIGHT and LABEL_TO_GRADE constants to give the grade associated
-with bucket labels for an assignment.
-
-Input:
-- np array with bucket labels.
-- E.g.: ['Minor Issues', 'Perfect', 'Minor Issues', 'Minor Issues', 'Perfect']
-
-Output:
-- Integer representing grade corresponding to the bucket labels.
-'''
-def generate_grade(labels):
-	grade = 0
-	for b, bucket in enumerate(BUCKETS):
-		label = labels[b]
-		bucket_grade = LABEL_TO_GRADE[label]
-		grade += (BUCKET_WEIGHT[bucket] * bucket_grade)
-	return grade
-
-'''
 Just opens the CSV file and returns two np arrays: one for the assignment IDs and
 another containing the bucket labels for each of the assignments (hence, a 2D array).
 '''
@@ -109,9 +80,11 @@ def load_data(csv_path):
 	bucket_cols = [i for i in range(1, len(headers))]
 
 	assignment_ids = np.loadtxt(csv_path, dtype=np.dtype(str), delimiter=',', skiprows=1, usecols=assignment_id_col)
+	complete_ids = np.array([csv_path + assignment_id for assignment_id in assignment_ids])
+
 	buckets = np.loadtxt(csv_path, dtype=np.dtype(str), delimiter=',', skiprows=1, usecols=bucket_cols)
 
-	return assignment_ids, buckets
+	return complete_ids, buckets
 
 def open_file(path):
 	try:
