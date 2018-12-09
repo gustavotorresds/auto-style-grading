@@ -107,10 +107,12 @@ def extract_features(assignment_id, bucket, report=None):
 	
 	if bucket == 'Decomposition':
 		return decomposition_features(file_lines, report)
-	# TODO: implement feature extraction for other buckets.
+	elif bucket == 'Commenting':
+		return commenting_features(file)
 	elif bucket == 'Naming and Spacing':
 		return naming_and_spacing_features(file_lines, report)
 	else:
+		# TODO: implement feature extraction for other buckets.
 		print('Can\'t read that bucket yet :/')
 
 	return []
@@ -287,6 +289,53 @@ def naming_and_spacing_features(file, report):
 	num_pmd_warns = get_pmd_warns(report)
 
 	return [wrong_camel_case_count, wrong_indentation_count, num_pmd_warns]
+
+def commenting_features(file):
+	num_comments = 0
+	ave_block_size = 0 
+	ave_comment_length = 0
+
+	def is_comment(line):
+		return '//' in line
+
+	def is_block_comment_start(line):
+		return '/**' in line or '/*' in line
+
+	def is_block_comment_end(line):
+		return '*/' in line
+	
+	code_block_list = []
+	curr_code_block_size = 0
+	num_code_blocks = 0 
+	in_comment_block_flag = 0
+	num_words = 0
+	for line in file:
+		if is_block_comment_start(line):
+			in_comment_block_flag = 1
+			num_code_blocks += 1
+			curr_code_block_size = 0
+		elif is_block_comment_end(line):
+			in_comment_block_flag = 0
+			code_block_list.append(curr_code_block_size)
+		elif in_comment_block_flag:
+			num_words += len(line.split(' '))
+			num_comments += 1
+			curr_code_block_size += 1
+		elif is_comment(line):
+			num_words += len(line.split(' '))
+			num_comments += 1
+		
+	if len(code_block_list) != 0:
+		ave_block_size = int(sum(code_block_list) / len(code_block_list))
+	else:
+		ave_block_size = 0
+	if num_comments != 0:
+		ave_comment_length = int(num_words / num_comments)
+	else:
+		ave_comment_length = 0
+
+	featureList = [num_comments, ave_block_size, ave_comment_length]
+	return featureList
 
 if __name__ == "__main__":
 	main()

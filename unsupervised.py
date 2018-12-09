@@ -9,7 +9,7 @@ import pickle
 from sklearn.cluster import KMeans
 from sklearn.manifold import TSNE
 
-K = 4
+K = 3
 
 def main():
 	pmd_reports = load_pkl_file('data.pkl')

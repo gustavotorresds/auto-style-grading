@@ -39,6 +39,32 @@ BOOL_TO_LABELS = defaultdict(int)
 BOOL_TO_LABELS['Good'] = ['Perfect', 'Minor Issues']
 BOOL_TO_LABELS['Bad'] = ['Major Issues', 'Horrible', 'No comments or lots missing']
 
+GRADES = {'Major Issues': 1, 'Minor Issues': 2, 'Perfect': 3}
+QUARTER_IDS = ['1222', '1278', '1363']
+
+# Submissions whose ID's we should skip (broken code or anything else that's poluting our dataset)
+BLACK_LIST = ['30879']
+
+def get_data(bucket):
+	ids = []
+	labels = []
+
+	for quarter in QUARTER_IDS:
+		csv_path = '/'.join(['.', 'data', 'grades', quarter + '.csv'])
+
+		with open(csv_path, 'r') as csv_f:
+			# headers = csv_f.readline().strip().split(',')
+			reader = csv.DictReader(csv_f)
+
+			for row in reader:
+				label = row[bucket]
+				assignment_id = row['\ufeffid']
+				if label in GRADES and assignment_id not in BLACK_LIST:
+					ids.append('/'.join([quarter, assignment_id]))
+					labels.append(int(GRADES[label]))
+
+	return ids, labels
+
 '''
 Returns an array of 1's and 0's corresponding to each assignment.
 1 indicates that the assignment had a good grade. 0 indicates the assignment
