@@ -1,7 +1,6 @@
 import os
 
-# dirpath, dirnames, filenames = 
-# print([d for d in walk('./data/files/1247'))
+# Just a helper to see which directories didn't have a "Breakout.java" file.
 
 root = './data/files/1363'
 
@@ -11,8 +10,6 @@ for (dirpath, dirnames, filenames) in os.walk(root):
 	break
 
 for submission in f:
-	# print(submission)
 	l = os.listdir(root + '/' + submission)
-	# print(l)
 	if 'Breakout.java' not in l:
 		print(submission)

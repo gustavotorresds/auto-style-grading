@@ -11,50 +11,33 @@ id,Decomposition,Commenting,Instance Variables and Parameters and Constants,Nami
 '''
 
 VAR_TYPES = ['double', 'int', 'String', 'GLabel', 'GObject', 'GOval', 'GRect', 'void', 'boolean', 'RandomGenerator']
-
-# The impact each label has.
-# TODO: what scale should we consider?
-# TODO: when label is not found (i.e., "Random Label"), the default impact
-# ends up being zero. Is that what we want?
-
 BUCKETS = ['Decomposition', 'Commenting', 'Instance Variables and Parameters and Constants',\
  'Naming and Spacing', 'Logic and Redundancy']
-
 GRADES = {'Major Issues': 1, 'Minor Issues': 2, 'Perfect': 3}
+QUARTER_IDS = ['1222', '1278', '1363']
 
-# The weigth each bucket should have on the grading.
-# TODO: should we weight anything heavier? How should we attribute weights?
-BUCKET_WEIGHT = defaultdict(int)
-BUCKET_WEIGHT[BUCKETS[0]] = 1
-BUCKET_WEIGHT[BUCKETS[1]] = 1
-BUCKET_WEIGHT[BUCKETS[2]] = 1
-BUCKET_WEIGHT[BUCKETS[3]] = 1
-BUCKET_WEIGHT[BUCKETS[4]] = 1
+# Submissions whose ID's we should skip (broken code or anything else that's poluting our dataset)
+BLACK_LIST = ['30879']
 
-# Threshold to classify whether a grade is good or not.
-THRESHOLD = 30
+def get_data(bucket):
+	ids = []
+	labels = []
 
-BOOL_TO_LABELS = defaultdict(int)
-BOOL_TO_LABELS['Good'] = ['Perfect', 'Minor Issues']
-BOOL_TO_LABELS['Bad'] = ['Major Issues', 'Horrible', 'No comments or lots missing']
+	for quarter in QUARTER_IDS:
+		csv_path = '/'.join(['.', 'data', 'grades', quarter + '.csv'])
 
-def get_data(quarter, bucket):
-	csv_path = '/'.join(['.', 'data', 'grades', quarter + '.csv'])
+		with open(csv_path, 'r') as csv_f:
+			# headers = csv_f.readline().strip().split(',')
+			reader = csv.DictReader(csv_f)
 
-	with open(csv_path, 'r') as csv_f:
-		# headers = csv_f.readline().strip().split(',')
-		reader = csv.DictReader(csv_f)
+			for row in reader:
+				label = row[bucket]
+				assignment_id = row['\ufeffid']
+				if label in GRADES and assignment_id not in BLACK_LIST:
+					ids.append('/'.join([quarter, assignment_id]))
+					labels.append(int(GRADES[label]))
 
-		ids = []
-		labels = []
-
-		for row in reader:
-			label = row[bucket]
-			if label in GRADES:
-				ids.append('/'.join([quarter, row['\ufeffid']]))
-				labels.append(int(GRADES[label]))
-
-		return ids, labels
+	return ids, labels
 
 '''
 Returns an array of 1's and 0's corresponding to each assignment.
