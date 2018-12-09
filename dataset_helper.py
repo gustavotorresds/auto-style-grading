@@ -20,33 +20,30 @@ results = dict()
 
 assignment_ids, _ = util.get_data('Decomposition')
 
-# for a_id in assignment_ids:
-# 	file_path = '/'.join(['./data/files/', a_id, 'Breakout.java'])
-
-# 	bash_command = './pmd-bin-6.9.0/bin/run.sh cpd --minimum-tokens 15 --files {}'.format(file_path)
-# 	process = subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE)
-# 	out, error = process.communicate()
-# 	results[a_id] = str(out)
-
-# output = open('data.pkl', 'wb')
-# pickle.dump(results, output)
-# output.close()
-
-assignment_ids, _ = util.get_data('Naming and Spacing')
-
-results = dict()
-
 for a_id in assignment_ids:
 	file_path = '/'.join(['./data/files/', a_id, 'Breakout.java'])
 
-	bash_command = './pmd-bin-6.9.0/bin/run.sh pmd -d {} -f text -R category/java/codestyle.xml'.format(file_path).format(file_path)
+	bash_command = './pmd-bin-6.9.0/bin/run.sh cpd --minimum-tokens 5 --files {}'.format(file_path)
 	process = subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE)
 	out, error = process.communicate()
 	results[a_id] = str(out)
 
-output = open('data_pmd.pkl', 'wb')
+output = open('data.pkl', 'wb')
 pickle.dump(results, output)
 output.close()
 
-print(len(assignment_ids))
-print(len(results))
+# assignment_ids, _ = util.get_data('Naming and Spacing')
+
+# results = dict()
+
+# for a_id in assignment_ids:
+# 	file_path = '/'.join(['./data/files/', a_id, 'Breakout.java'])
+
+# 	bash_command = './pmd-bin-6.9.0/bin/run.sh pmd -d {} -f text -R category/java/codestyle.xml'.format(file_path).format(file_path)
+# 	process = subprocess.Popen(bash_command.split(), stdout=subprocess.PIPE)
+# 	out, error = process.communicate()
+# 	results[a_id] = str(out)
+
+# output = open('data_pmd.pkl', 'wb')
+# pickle.dump(results, output)
+# output.close()
