@@ -16,7 +16,7 @@ from sklearn.model_selection import train_test_split
 TEST_SIZE = .1
 VAL_SIZE = 0.1
 VAR_TYPES = ['byte', 'short', 'int', 'long', 'float', 'double', 'char', 'boolean']
-GRAPHICS_VAR_TYPES = ['GRect', 'GObject', 'GLine', 'GPoint', 'GOval', 'GImage', 'GCompound', 'GRectangle', 'GLabel']
+GRAPHICS_VAR_TYPES = ['GRect', 'GObject', 'GLine', 'GPoint', 'GOval', 'GImage', 'mpound', 'GRectangle', 'GLabel']
 
 def main():
 	pmd_reports = load_pkl_file('data_pmd.pkl')
