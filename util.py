@@ -45,6 +45,8 @@ QUARTER_IDS = ['1222', '1278', '1363']
 # Submissions whose ID's we should skip (broken code or anything else that's poluting our dataset)
 BLACK_LIST = ['30879']
 
+VAR_TYPES = ['double', 'int', 'String', 'GLabel', 'GObject', 'GOval', 'GRect', 'void', 'boolean', 'RandomGenerator']
+
 def get_data(bucket):
 	ids = []
 	labels = []

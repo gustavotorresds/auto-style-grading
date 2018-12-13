@@ -12,6 +12,8 @@ from sklearn.model_selection import train_test_split
 
 TEST_SIZE = .1
 
+
+
 def main():
 	pmd_reports = load_pkl_file('data.pkl')
 
@@ -28,23 +30,25 @@ def main():
 	mlp(xTrain, yTrain, xTest, yTest)
 	random_forest(xTrain, yTrain, xTest, yTest)
 
-	# pmd_reports = load_pkl_file('data_pmd.pkl')
+	pmd_reports = load_pkl_file('data_pmd.pkl')
 
-	# bucket = 'Naming and Spacing'
+	bucket = 'Naming and Spacing'
 
-	# assignment_ids, y = util.get_data('Naming and Spacing')
+	assignment_ids, y = util.get_data('Naming and Spacing')
 
-	# for a in assignment_ids:
-	# 	if a not in pmd_reports:
-	# 		print(a)
+	for a in assignment_ids:
+		if a not in pmd_reports:
+			print(a)
 
-	# X = np.array([extract_features(assignment_id, bucket, pmd_reports[assignment_id]) for assignment_id in assignment_ids])
+	X = np.array([extract_features(assignment_id, bucket, pmd_reports[assignment_id]) for assignment_id in assignment_ids])
 
-	# xTrain, xTest, yTrain, yTest = train_test_split(X, y, test_size=TEST_SIZE, stratify=y, random_state=0)
+	xTrain, xTest, yTrain, yTest = train_test_split(X, y, test_size=TEST_SIZE, stratify=y, random_state=0)
 
-	# naive_bayes(xTrain, yTrain, xTest, yTest)
-	# logistic_regression(xTrain, yTrain, xTest, yTest)
-	# gradient_boosting(xTrain, yTrain, xTest, yTest)
+	naive_bayes(xTrain, yTrain, xTest, yTest)
+	logistic_regression(xTrain, yTrain, xTest, yTest)
+	gradient_boosting(xTrain, yTrain, xTest, yTest)
+	mlp(xTrain, yTrain, xTest, yTest)
+	random_forest(xTrain, yTrain, xTest, yTest)
 
 
 def load_pkl_file(filename):
@@ -52,6 +56,16 @@ def load_pkl_file(filename):
 	pmd_reports = pickle.load(pkl_file)
 	pkl_file.close()
 	return pmd_reports
+
+
+def print_proportions(t):
+	m = {1: 0, 2: 0, 3: 0}
+	for elem in t:
+		m[elem] += 1
+
+	s = m[1] + m[2] + m[3]
+	for key in m:
+		print(('CLASS {}: {}').format(key, m[key] / s))
 
 
 def train_and_test(clf, xTrain, yTrain, xTest, yTest, model_name='model_name'):
@@ -69,6 +83,16 @@ def train_and_test(clf, xTrain, yTrain, xTest, yTest, model_name='model_name'):
 		if abs(prediction - ground_truth) > 1:
 			count += 1
 	print('off by 2: {}'.format(count / len(predictions)))
+
+	print('PROPORTIONS OF TRAIN')
+	print_proportions(yTrain)
+
+	print('PROPORTIONS OF TEST')
+	print_proportions(yTest)
+
+	print('PROPORTIONS OF PRED')
+	print_proportions(predictions)
+
 	# np.savetxt('./output/{}_labels.txt'.format(model_name), predictions)
 
 def random_forest(xTrain, yTrain, xTest, yTest):
