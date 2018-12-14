@@ -41,29 +41,14 @@ def main():
 		random_forest(xTrain, yTrain, xTest, yTest)
 		print("\n")
 		
+		'''
+		Code for hyperparameter tuning.
+		'''
 		#train_and_validate_logistic(xTrain, yTrain, xTest, yTest)
 		#train_and_validate_svm(xTrain, yTrain, xTest, yTest)
 		#train_and_validate_gbt(xTrain, yTrain, xTest, yTest)
 		#train_and_validate_rt(xTrain, yTrain, xTest, yTest)
 		#train_and_validate_mlp(xTrain, yTrain, xTest, yTest)
-
-	# pmd_reports = load_pkl_file('data_pmd.pkl')
-
-	# bucket = 'Naming and Spacing'
-
-	# assignment_ids, y = util.get_data('Naming and Spacing')
-
-	# for a in assignment_ids:
-	# 	if a not in pmd_reports:
-	# 		print(a)
-
-	# X = np.array([extract_features(assignment_id, bucket, pmd_reports[assignment_id]) for assignment_id in assignment_ids])
-
-	# xTrain, xTest, yTrain, yTest = train_test_split(X, y, test_size=TEST_SIZE, stratify=y, random_state=0)
-
-	# naive_bayes(xTrain, yTrain, xTest, yTest)
-	# logistic_regression(xTrain, yTrain, xTest, yTest)
-	# gradient_boosting(xTrain, yTrain, xTest, yTest)
 
 
 def load_pkl_file(filename):

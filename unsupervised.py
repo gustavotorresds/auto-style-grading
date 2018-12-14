@@ -15,7 +15,7 @@ def main():
 	pmd_reports = load_pkl_file('data.pkl')
 
 	bucket = 'Decomposition'
-	assignment_ids, y = util.get_data(bucket)
+	assignment_ids, y = util.get_data(bucket, pmd_reports)
 
 	X = np.array([extract_features(assignment_id, bucket, pmd_reports[assignment_id]) for assignment_id in assignment_ids])
 	X_embedded = TSNE(n_components=2).fit_transform(X)
