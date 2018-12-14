@@ -44,10 +44,9 @@ QUARTER_IDS = ['1222', '1278', '1363']
 
 # Submissions whose ID's we should skip (broken code or anything else that's poluting our dataset)
 BLACK_LIST = ['30879']
-
 VAR_TYPES = ['double', 'int', 'String', 'GLabel', 'GObject', 'GOval', 'GRect', 'void', 'boolean', 'RandomGenerator']
 
-def get_data(bucket):
+def get_data(bucket, pmd_reports):
 	ids = []
 	labels = []
 
@@ -55,15 +54,15 @@ def get_data(bucket):
 		csv_path = '/'.join(['.', 'data', 'grades', quarter + '.csv'])
 
 		with open(csv_path, 'r') as csv_f:
-			# headers = csv_f.readline().strip().split(',')
 			reader = csv.DictReader(csv_f)
-
 			for row in reader:
 				label = row[bucket]
 				assignment_id = row['\ufeffid']
 				if label in GRADES and assignment_id not in BLACK_LIST:
-					ids.append('/'.join([quarter, assignment_id]))
-					labels.append(int(GRADES[label]))
+					assignment_idx = '/'.join([quarter, assignment_id])
+					if (assignment_idx in pmd_reports):
+						ids.append('/'.join([quarter, assignment_id]))
+						labels.append(int(GRADES[label]))
 
 	return ids, labels
 
